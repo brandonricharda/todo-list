@@ -1,0 +1,111 @@
+/* Colors */
+
+nav, #project-container-header > button, #project-list > button:hover {
+    background-color: #14213D;
+}
+
+.complete-task-button {
+    background-color: green;
+}
+
+.expand-task-button {
+    background-color: #FCA311;
+}
+
+.delete-task-button {
+    background-color: red;
+}
+
+nav, #project-list > button:hover, .complete-task-button, .expand-task-button, .delete-task-button {
+    color: #FFFFFF;
+}
+
+/* Fonts */
+
+body, button {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Flex */
+
+nav, #main-area, #project-container-header, #project-list, #task-list, .task, .task-metadata {
+    display: flex;
+}
+
+nav > p, #tasks-container {
+    flex: 4;
+}
+
+#projects-container, .task-metadata, .complete-task-button, .expand-task-button, .delete-task-button {
+    flex: 1;
+}
+
+#project-list, #task-list, .task-metadata {
+    flex-direction: column;
+}
+
+/* Spacing and Sizing */
+
+body {
+    margin: 0px;
+}
+
+.column-header, nav > p {
+    margin-left: 20px;
+}
+
+button {
+    border: none;
+    padding: 5px;
+}
+
+/* Misc */
+
+#projects-container {
+    background-color: #E5E5E5;
+}
+
+nav > p {
+    text-align: left;
+}
+
+#main-area {
+    height: 100vh;
+}
+
+#project-container-header {
+    justify-content: space-between;
+}
+
+#project-list > button {
+    background-color: transparent;
+    text-align: left;
+    padding: 20px 0px 20px 20px;
+    font-size: 20px;
+}
+
+.task {
+    padding: 0px 0px 20px 20px;
+}
+
+@media (max-width: 600px) {
+    h2, h3, p {
+        text-align: center;
+    }
+
+    #project-list > button {
+        text-align: center;
+    }
+
+    #project-container-header {
+        display: block;
+    }
+
+    #main-area, .task {
+        flex-direction: column;
+    }
+
+    .task {
+        padding-right: 20px;
+    }
+}
