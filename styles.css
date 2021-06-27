@@ -1,10 +1,10 @@
 /* Colors */
 
-nav, #project-container-header > button, #project-list > button:hover {
+nav, #project-list > button:hover {
     background-color: #14213D;
 }
 
-.complete-task-button {
+.complete-task-button, #new-project-button, #new-task-button {
     background-color: green;
 }
 
@@ -16,7 +16,7 @@ nav, #project-container-header > button, #project-list > button:hover {
     background-color: red;
 }
 
-nav, #project-list > button:hover, .complete-task-button, .expand-task-button, .delete-task-button {
+nav, #project-list > button:hover, .complete-task-button, .expand-task-button, .delete-task-button, #new-project-button, #new-task-button {
     color: #FFFFFF;
 }
 
@@ -28,7 +28,7 @@ body, button {
 
 /* Flex */
 
-nav, #main-area, #project-container-header, #project-list, #task-list, .task, .task-metadata {
+nav, #main-area, #project-container-header, #project-list, #task-list, .task, .task-metadata, #task-container-header {
     display: flex;
 }
 
@@ -73,8 +73,9 @@ nav > p {
     height: 100vh;
 }
 
-#project-container-header {
+#project-container-header, #task-container-header {
     justify-content: space-between;
+    margin-bottom: 50px;
 }
 
 #project-list > button {
@@ -88,6 +89,12 @@ nav > p {
     padding: 0px 0px 20px 20px;
 }
 
+.task > button:hover, #new-project-button:hover, #new-task-button:hover {
+    filter: brightness(80%);
+}
+
+/* Responsiveness */
+
 @media (max-width: 600px) {
     h2, h3, p {
         text-align: center;
@@ -97,15 +104,28 @@ nav > p {
         text-align: center;
     }
 
-    #project-container-header {
-        display: block;
+    #project-list > button {
+        padding-left: 0px;
     }
 
-    #main-area, .task {
+    .column-header {
+        margin-left: 0px;
+    }
+
+    #main-area, .task, #project-container-header, #task-container-header {
         flex-direction: column;
+        margin-bottom: 0px;
+    }
+
+    nav > p {
+        text-align: center;
     }
 
     .task {
         padding-right: 20px;
+    }
+
+    #new-project-button, #new-task-button {
+        margin: 0px 20px 20px 20px;
     }
 }
