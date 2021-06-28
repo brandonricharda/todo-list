@@ -93,6 +93,10 @@ nav > p {
     filter: brightness(80%);
 }
 
+#task-container-header, #project-container-header {
+    border-bottom: solid 1px black;
+}
+
 /* Responsiveness */
 
 @media (max-width: 600px) {
