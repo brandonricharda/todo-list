@@ -99,7 +99,7 @@ nav > p {
 
 /* Responsiveness */
 
-@media (max-width: 600px) {
+@media (max-width: 1300px) {
     h2, h3, p {
         text-align: center;
     }
