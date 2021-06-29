@@ -44,7 +44,7 @@ nav > p, #tasks-container {
     flex: 1;
 }
 
-#project-list, #task-list, .task-metadata {
+#project-list, #task-list, .task-metadata, #project-form-container {
     flex-direction: column;
 }
 
@@ -63,7 +63,15 @@ button {
     padding: 5px;
 }
 
+#project-name-input {
+    line-height: 50px;
+}
+
 /* Misc */
+
+#project-name-input {
+    text-align: center;
+}
 
 #projects-container {
     background-color: #E5E5E5;
@@ -138,5 +146,13 @@ nav > p {
 
     #new-project-button, #new-task-button {
         margin: 0px 20px 20px 20px;
+    }
+
+    #project-submit-button, #project-name-input {
+        margin: 0px 20px 0px 20px;
+    }
+
+    #project-form-container {
+        margin-top: 20px;
     }
 }
