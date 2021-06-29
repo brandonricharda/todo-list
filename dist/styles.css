@@ -4,15 +4,15 @@ nav, #project-list > button:hover {
     background-color: #14213D;
 }
 
-.complete-task-button, #new-project-button, #new-task-button, #project-submit-button {
+.is-green {
     background-color: green;
 }
 
-.expand-task-button {
+.is-orange {
     background-color: #FCA311;
 }
 
-.delete-task-button {
+.is-red {
     background-color: red;
 }
 
@@ -32,23 +32,23 @@ body, button {
 
 /* Flex */
 
-nav, #main-area, #project-container-header, #project-list, #task-list, .task, .task-metadata, #task-container-header, #project-form-container {
+.flex {
     display: flex;
 }
 
-nav > p, #tasks-container {
+.flex-4 {
     flex: 4;
 }
 
-.task-metadata {
+.flex-10 {
     flex: 10;
 }
 
-#projects-container, .complete-task-button, .expand-task-button, .delete-task-button, #project-name-input, #project-submit-button {
+.flex-1 {
     flex: 1;
 }
 
-#project-list, #task-list, .task-metadata, #project-form-container {
+.flex-column {
     flex-direction: column;
 }
 
@@ -58,11 +58,11 @@ body {
     margin: 0px;
 }
 
-.column-header, nav > p {
+.ml-20 {
     margin-left: 20px;
 }
 
-button {
+.flat-padded-clickable-button {
     border: none;
     padding: 5px;
     cursor: pointer;
