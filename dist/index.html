@@ -4,99 +4,99 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <nav class="flex">
-            <p class="ml-20">Todo List</p>
+        <nav class="flex flex-horizontal-center has-white-text is-blue">
+            <p class="ml-20 has-text-left-desktop has-text-centered-mobile">Todo List</p>
         </nav>
 
         <div id="main-area" class="flex">
 
             <div id="projects-container" class="flex-1">
 
-                <div id="project-container-header" class="flex">
-                    <h2 class="column-header ml-20">Projects</h2>
-                    <button id="new-project-button" class="flat-padded-clickable-button is-green">New Project</button>
+                <div id="project-container-header" class="flex flex-vertical-center flex-horizontal-center">
+                    <h2 class="column-header ml-20 has-text-centered-mobile">Projects</h2>
+                    <button id="new-project-button" class="is-blue flat-button ml-20 has-pointer round squared-35 has-white-text">+</button>
                 </div>
 
                 <div id="project-form-container" class="flex-column flex"></div>
 
                 <div id="project-list" class="flex-column flex">
-                    <button class="flat-padded-clickable-button">One</button>
-                    <button class="flat-padded-clickable-button">Two</button>
-                    <button class="flat-padded-clickable-button">Three</button>
-                    <button class="flat-padded-clickable-button">Four</button>
-                    <button class="flat-padded-clickable-button">Five</button>
+                    <button class="flat-button has-text-centered-mobile has-text-left-desktop has-white-text-on-hover has-pointer is-blue-on-hover transparent-background">One</button>
+                    <button class="flat-button has-text-centered-mobile has-text-left-desktop has-white-text-on-hover has-pointer is-blue-on-hover transparent-background">Two</button>
+                    <button class="flat-button has-text-centered-mobile has-text-left-desktop has-white-text-on-hover has-pointer is-blue-on-hover transparent-background">Three</button>
+                    <button class="flat-button has-text-centered-mobile has-text-left-desktop has-white-text-on-hover has-pointer is-blue-on-hover transparent-background">Four</button>
+                    <button class="flat-button has-text-centered-mobile has-text-left-desktop has-white-text-on-hover has-pointer is-blue-on-hover transparent-background">Five</button>
                 </div>
             </div>
 
-            <div id="tasks-container" class="flex-4">
+            <div id="tasks-container" class="flex-10">
                 
-                <div id="task-container-header" class="flex">
-                    <h2 class="column-header ml-20">Tasks</h2>
-                    <button id="new-task-button" class="flat-padded-clickable-button is-green">New Task</button>
+                <div id="task-container-header" class="flex flex-vertical-center flex-horizontal-center">
+                    <h2 class="column-header ml-20 has-text-centered-mobile">Tasks</h2>
+                    <button id="new-task-button" class="is-blue flat-button ml-20 has-pointer round round squared-35 has-white-text">+</button>
                 </div>
 
                 <div id="task-form-container"></div>
 
                 <div id="task-list" class="flex-column flex">
 
-                    <div class="task flex">
+                    <div class="task flex flex-vertical-center">
                         <div class="task-metadata flex-10 flex-column flex">
-                            <h3 class="task-name">Finish design for todo app</h3>
-                            <p class="task-due-date">January 1 2022</p>
+                            <h3 class="task-name has-text-centered-mobile">Finish design for todo app</h3>
+                            <p class="task-due-date has-text-centered-mobile">January 1 2022</p>
                         </div>
-                        <button class="complete-task-button flex-1 flat-padded-clickable-button is-green">Complete</button>
-                        <button class="expand-task-button is-orange flex-1 flat-padded-clickable-button">See Details</button>
-                        <button class="delete-task-button is-red flex-1 flat-padded-clickable-button">Delete</button>
+                        <button class="flex-1 flat-button has-text-centered-mobile has-pointer round squared-35 is-green has-white-text">✓</button>
+                        <button class="is-orange flex-1 flat-button has-text-centered-mobile has-pointer round squared-35 has-white-text">Ⓘ</button>
+                        <button class="is-red flex-1 flat-button has-text-centered-mobile has-pointer round squared-35 has-white-text">X</button>
                     </div>
 
-                    <div class="task flex">
+                    <div class="task flex flex-vertical-center">
                         <div class="task-metadata flex-10 flex-column flex">
-                            <h3 class="task-name">Finish design for todo app</h3>
-                            <p class="task-due-date">January 1 2022</p>
+                            <h3 class="task-name has-text-centered-mobile">Finish design for todo app</h3>
+                            <p class="task-due-date has-text-centered-mobile">January 1 2022</p>
                         </div>
-                        <button class="complete-task-button flex-1 flat-padded-clickable-button is-green">Complete</button>
-                        <button class="expand-task-button is-orange flex-1 flat-padded-clickable-button">See Details</button>
-                        <button class="delete-task-button is-red flex-1 flat-padded-clickable-button">Delete</button>
+                        <button class="flex-1 flat-button has-text-centered-mobile has-pointer round squared-35 is-green has-white-text">✓</button>
+                        <button class="is-orange flex-1 flat-button has-text-centered-mobile has-pointer round squared-35 has-white-text">Ⓘ</button>
+                        <button class="is-red flex-1 flat-button has-text-centered-mobile has-pointer round squared-35 has-white-text">X</button>
                     </div>
 
-                    <div class="task flex">
+                    <div class="task flex flex-vertical-center">
                         <div class="task-metadata flex-10 flex-column flex">
-                            <h3 class="task-name">Finish design for todo app</h3>
-                            <p class="task-due-date">January 1 2022</p>
+                            <h3 class="task-name has-text-centered-mobile">Finish design for todo app</h3>
+                            <p class="task-due-date has-text-centered-mobile">January 1 2022</p>
                         </div>
-                        <button class="complete-task-button flex-1 flat-padded-clickable-button is-green">Complete</button>
-                        <button class="expand-task-button is-orange flex-1 flat-padded-clickable-button">See Details</button>
-                        <button class="delete-task-button is-red flex-1 flat-padded-clickable-button">Delete</button>
+                        <button class="flex-1 flat-button has-text-centered-mobile has-pointer round squared-35 is-green has-white-text">✓</button>
+                        <button class="is-orange flex-1 flat-button has-text-centered-mobile has-pointer round squared-35 has-white-text">Ⓘ</button>
+                        <button class="is-red flex-1 flat-button has-text-centered-mobile has-pointer round squared-35 has-white-text">X</button>
                     </div>
 
-                    <div class="task flex">
+                    <div class="task flex flex-vertical-center">
                         <div class="task-metadata flex-10 flex-column flex">
-                            <h3 class="task-name">Finish design for todo app</h3>
-                            <p class="task-due-date">January 1 2022</p>
+                            <h3 class="task-name has-text-centered-mobile">Finish design for todo app</h3>
+                            <p class="task-due-date has-text-centered-mobile">January 1 2022</p>
                         </div>
-                        <button class="complete-task-button flex-1 flat-padded-clickable-button is-green">Complete</button>
-                        <button class="expand-task-button is-orange flex-1 flat-padded-clickable-button">See Details</button>
-                        <button class="delete-task-button is-red flex-1 flat-padded-clickable-button">Delete</button>
+                        <button class="flex-1 flat-button has-text-centered-mobile has-pointer round squared-35 is-green has-white-text">✓</button>
+                        <button class="is-orange flex-1 flat-button has-text-centered-mobile has-pointer round squared-35 has-white-text">Ⓘ</button>
+                        <button class="is-red flex-1 flat-button has-text-centered-mobile has-pointer round squared-35 has-white-text">X</button>
                     </div>
 
-                    <div class="task flex">
+                    <div class="task flex flex-vertical-center">
                         <div class="task-metadata flex-10 flex-column flex">
-                            <h3 class="task-name">Finish design for todo app</h3>
-                            <p class="task-due-date">January 1 2022</p>
+                            <h3 class="task-name has-text-centered-mobile">Finish design for todo app</h3>
+                            <p class="task-due-date has-text-centered-mobile">January 1 2022</p>
                         </div>
-                        <button class="complete-task-button flex-1 flat-padded-clickable-button is-green">Complete</button>
-                        <button class="expand-task-button is-orange flex-1 flat-padded-clickable-button">See Details</button>
-                        <button class="delete-task-button is-red flex-1 flat-padded-clickable-button">Delete</button>
+                        <button class="flex-1 flat-button has-text-centered-mobile has-pointer round squared-35 is-green has-white-text">✓</button>
+                        <button class="is-orange flex-1 flat-button has-text-centered-mobile has-pointer round squared-35 has-white-text">Ⓘ</button>
+                        <button class="is-red flex-1 flat-button has-text-centered-mobile has-pointer round squared-35 has-white-text">X</button>
                     </div>
 
-                    <div class="task flex">
+                    <div class="task flex flex-vertical-center">
                         <div class="task-metadata flex-10 flex-column flex">
-                            <h3 class="task-name">Finish design for todo app</h3>
-                            <p class="task-due-date">January 1 2022</p>
+                            <h3 class="task-name has-text-centered-mobile">Finish design for todo app</h3>
+                            <p class="task-due-date has-text-centered-mobile">January 1 2022</p>
                         </div>
-                        <button class="complete-task-button flex-1 flat-padded-clickable-button is-green">Complete</button>
-                        <button class="expand-task-button is-orange flex-1 flat-padded-clickable-button">See Details</button>
-                        <button class="delete-task-button is-red flex-1 flat-padded-clickable-button">Delete</button>
+                        <button class="flex-1 flat-button has-text-centered-mobile has-pointer round squared-35 is-green has-white-text">✓</button>
+                        <button class="is-orange flex-1 flat-button has-text-centered-mobile has-pointer round squared-35 has-white-text">Ⓘ</button>
+                        <button class="is-red flex-1 flat-button has-text-centered-mobile has-pointer round squared-35 has-white-text">X</button>
                     </div>
 
                 </div>

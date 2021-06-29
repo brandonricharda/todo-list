@@ -1,8 +1,4 @@
-/* Colors */
-
-nav, #project-list > button:hover {
-    background-color: #14213D;
-}
+/* Colors and Brightness */
 
 .is-green {
     background-color: green;
@@ -16,7 +12,15 @@ nav, #project-list > button:hover {
     background-color: red;
 }
 
-nav, #project-list > button:hover, .complete-task-button, .expand-task-button, .delete-task-button, #new-project-button, #new-task-button, #project-submit-button {
+.is-blue, .is-blue-on-hover:hover {
+    background-color: #14213D;
+}
+
+.transparent-background {
+    background-color: transparent;
+}
+
+.has-white-text, .has-white-text-on-hover:hover {
     color: #FFFFFF;
 }
 
@@ -30,10 +34,29 @@ body, button {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+/* Buttons */
+
+.has-pointer {
+    cursor: pointer;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+.squared-35 {
+    width: 35px;
+    height: 35px;
+}
+
 /* Flex */
 
 .flex {
     display: flex;
+}
+
+.flex-1 {
+    flex: 1;
 }
 
 .flex-4 {
@@ -44,12 +67,12 @@ body, button {
     flex: 10;
 }
 
-.flex-1 {
-    flex: 1;
-}
-
 .flex-column {
     flex-direction: column;
+}
+
+.flex-vertical-center {
+    align-items: center;
 }
 
 /* Spacing and Sizing */
@@ -62,10 +85,8 @@ body {
     margin-left: 20px;
 }
 
-.flat-padded-clickable-button {
+.flat-button {
     border: none;
-    padding: 5px;
-    cursor: pointer;
 }
 
 #project-name-input {
@@ -82,31 +103,17 @@ body {
     background-color: #E5E5E5;
 }
 
-nav > p {
+.has-text-left-desktop {
     text-align: left;
-}
-
-#main-area {
-    height: 100vh;
-}
-
-#project-container-header, #task-container-header {
-    justify-content: space-between;
 }
 
 #project-list > button {
-    background-color: transparent;
-    text-align: left;
     padding: 20px 0px 20px 20px;
     font-size: 20px;
 }
 
 .task {
     padding: 0px 0px 20px 20px;
-}
-
-#task-container-header, #project-container-header {
-    border-bottom: solid 1px black;
 }
 
 #project-name-input {
@@ -120,11 +127,8 @@ nav > p {
 /* Responsiveness */
 
 @media (max-width: 1300px) {
-    h2, h3, p {
-        text-align: center;
-    }
 
-    #project-list > button {
+    .has-text-centered-mobile {
         text-align: center;
     }
 
@@ -136,21 +140,13 @@ nav > p {
         margin-left: 0px;
     }
 
-    #main-area, .task, #project-container-header, #task-container-header {
+    #main-area, .task {
         flex-direction: column;
         margin-bottom: 0px;
     }
 
-    nav > p {
-        text-align: center;
-    }
-
     .task {
         padding-right: 20px;
-    }
-
-    #new-project-button, #new-task-button {
-        margin: 0px 20px 20px 20px;
     }
 
     #project-submit-button, #project-name-input {
@@ -159,5 +155,9 @@ nav > p {
 
     #project-form-container {
         margin-top: 20px;
+    }
+
+    .flex-horizontal-center {
+        justify-content: center;
     }
 }

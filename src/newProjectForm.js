@@ -16,7 +16,7 @@ const newProjectForm = (function() {
             let projectSubmitButton = document.createElement("button");
             projectSubmitButton.innerHTML = "Create";
             projectSubmitButton.setAttribute("id", "project-submit-button");
-            projectSubmitButton.setAttribute("class", "flex-1 flat-padded-clickable-button is-green");
+            projectSubmitButton.setAttribute("class", "flex-1 flat-button is-green has-white-text");
             // add new project form elements to DOM
             projectFormContainer.appendChild(projectNameInput);
             projectFormContainer.appendChild(projectSubmitButton);
