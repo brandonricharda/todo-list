@@ -7,3 +7,5 @@ class Task {
         this.status = status;
     }
 }
+
+export default Task;

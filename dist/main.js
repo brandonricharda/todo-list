@@ -16,7 +16,7 @@
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst domController = (function() {\n    // select new project and new task buttons\n    let newProjectButton = document.getElementById(\"new-project-button\");\n    let newTaskButton = document.getElementById(\"new-task-button\");\n    // activate new project and new task buttons\n    newProjectButton.addEventListener(\"click\", function() {\n        console.log(\"New project button clicked!\");\n    });\n    newTaskButton.addEventListener(\"click\", function() {\n        console.log(\"New task button clicked!\");\n    });\n});\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (domController);\n\n//# sourceURL=webpack://todo-list/./src/domController.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _newProjectForm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./newProjectForm */ \"./src/newProjectForm.js\");\n\n\nconst domController = (function() {\n    // select new project and new task buttons\n    let newProjectButton = document.getElementById(\"new-project-button\");\n    let newTaskButton = document.getElementById(\"new-task-button\");\n    // activate new project and new task buttons\n    newProjectButton.addEventListener(\"click\", function() {\n        (0,_newProjectForm__WEBPACK_IMPORTED_MODULE_0__.default)().showForm();\n    });\n    newTaskButton.addEventListener(\"click\", function() {\n        console.log(\"New task button clicked!\");\n    });\n});\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (domController);\n\n//# sourceURL=webpack://todo-list/./src/domController.js?");
 
 /***/ }),
 
@@ -27,6 +27,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _domController__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./domController */ \"./src/domController.js\");\n\n\n// activate the default DOM controls (i.e. New Project and New Task buttons)\n(0,_domController__WEBPACK_IMPORTED_MODULE_0__.default)();\n\n//# sourceURL=webpack://todo-list/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/newProjectForm.js":
+/*!*******************************!*\
+  !*** ./src/newProjectForm.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst newProjectForm = (function() {\n\n    let projectFormContainer = document.getElementById(\"project-form-container\");\n\n    return {\n        hideForm: function() {\n            projectFormContainer.innerHTML = \"\";\n        },\n        showForm: function() {\n            this.hideForm();\n            // create new project form elements\n            let projectNameInput = document.createElement(\"input\");\n            projectNameInput.setAttribute(\"id\", \"project-name-input\");\n            projectNameInput.setAttribute(\"placeholder\", \"Project Name\");\n            let projectSubmitButton = document.createElement(\"button\");\n            projectSubmitButton.innerHTML = \"Create\";\n            projectSubmitButton.setAttribute(\"id\", \"project-submit-button\");\n            // add new project form elements to DOM\n            projectFormContainer.appendChild(projectNameInput);\n            projectFormContainer.appendChild(projectSubmitButton);\n        }\n    }\n\n});\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (newProjectForm);\n\n//# sourceURL=webpack://todo-list/./src/newProjectForm.js?");
 
 /***/ })
 
