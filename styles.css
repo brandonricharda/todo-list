@@ -40,7 +40,11 @@ nav > p, #tasks-container {
     flex: 4;
 }
 
-#projects-container, .task-metadata, .complete-task-button, .expand-task-button, .delete-task-button, #project-name-input, #project-submit-button {
+.task-metadata {
+    flex: 10;
+}
+
+#projects-container, .complete-task-button, .expand-task-button, .delete-task-button, #project-name-input, #project-submit-button {
     flex: 1;
 }
 
@@ -61,6 +65,7 @@ body {
 button {
     border: none;
     padding: 5px;
+    cursor: pointer;
 }
 
 #project-name-input {
