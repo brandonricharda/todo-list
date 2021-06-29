@@ -4,7 +4,7 @@ nav, #project-list > button:hover {
     background-color: #14213D;
 }
 
-.complete-task-button, #new-project-button, #new-task-button {
+.complete-task-button, #new-project-button, #new-task-button, #project-submit-button {
     background-color: green;
 }
 
@@ -16,8 +16,12 @@ nav, #project-list > button:hover {
     background-color: red;
 }
 
-nav, #project-list > button:hover, .complete-task-button, .expand-task-button, .delete-task-button, #new-project-button, #new-task-button {
+nav, #project-list > button:hover, .complete-task-button, .expand-task-button, .delete-task-button, #new-project-button, #new-task-button, #project-submit-button {
     color: #FFFFFF;
+}
+
+.task > button:hover, #new-project-button:hover, #new-task-button:hover, #project-submit-button:hover {
+    filter: brightness(80%);
 }
 
 /* Fonts */
@@ -28,7 +32,7 @@ body, button {
 
 /* Flex */
 
-nav, #main-area, #project-container-header, #project-list, #task-list, .task, .task-metadata, #task-container-header {
+nav, #main-area, #project-container-header, #project-list, #task-list, .task, .task-metadata, #task-container-header, #project-form-container {
     display: flex;
 }
 
@@ -36,7 +40,7 @@ nav > p, #tasks-container {
     flex: 4;
 }
 
-#projects-container, .task-metadata, .complete-task-button, .expand-task-button, .delete-task-button {
+#projects-container, .task-metadata, .complete-task-button, .expand-task-button, .delete-task-button, #project-name-input, #project-submit-button {
     flex: 1;
 }
 
@@ -75,7 +79,6 @@ nav > p {
 
 #project-container-header, #task-container-header {
     justify-content: space-between;
-    margin-bottom: 50px;
 }
 
 #project-list > button {
@@ -89,12 +92,16 @@ nav > p {
     padding: 0px 0px 20px 20px;
 }
 
-.task > button:hover, #new-project-button:hover, #new-task-button:hover {
-    filter: brightness(80%);
-}
-
 #task-container-header, #project-container-header {
     border-bottom: solid 1px black;
+}
+
+#project-name-input {
+    border: none;
+}
+
+#project-name-input:focus {
+    outline: none;
 }
 
 /* Responsiveness */
