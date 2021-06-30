@@ -9,9 +9,9 @@ const newProjectForm = (function() {
 
     return {
         showForm: function() {
-            // before adding a new form, make sure the container is empty
+            // before adding a new form, make sure the container is empty (aka hide form)
             emptyContainer(container);
-            
+
             nameInput.setAttribute("id", "project-name-input");
             nameInput.setAttribute("class", "flex-1");
             nameInput.setAttribute("placeholder", "Project Name");
@@ -31,6 +31,9 @@ const newProjectForm = (function() {
                 emptyContainer(container);
             });
 
+        },
+        hideForm: function() {
+            emptyContainer(container);
         },
         returnValue: function() {
             return nameInput.value;
