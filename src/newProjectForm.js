@@ -1,26 +1,41 @@
+import emptyContainer from "./emptyContainer";
+
 const newProjectForm = (function() {
 
-    let projectFormContainer = document.getElementById("project-form-container");
+    let container = document.getElementById("project-form-container");
+    let nameInput = document.createElement("input");
+    let submitButton = document.createElement("button");
+    let hideButton = document.createElement("button");
 
     return {
-        hideForm: function() {
-            projectFormContainer.innerHTML = "";
-        },
         showForm: function() {
-            this.hideForm();
-            // create new project form elements
-            let projectNameInput = document.createElement("input");
-            projectNameInput.setAttribute("id", "project-name-input");
-            projectNameInput.setAttribute("class", "flex-1");
-            projectNameInput.setAttribute("placeholder", "Project Name");
-            let projectSubmitButton = document.createElement("button");
-            projectSubmitButton.innerHTML = "Create";
-            projectSubmitButton.setAttribute("id", "project-submit-button");
-            projectSubmitButton.setAttribute("class", "flex-1 flat-button is-green has-white-text");
-            // add new project form elements to DOM
-            projectFormContainer.appendChild(projectNameInput);
-            projectFormContainer.appendChild(projectSubmitButton);
-        }
+            // before adding a new form, make sure the container is empty
+            emptyContainer(container);
+            
+            nameInput.setAttribute("id", "project-name-input");
+            nameInput.setAttribute("class", "flex-1");
+            nameInput.setAttribute("placeholder", "Project Name");
+
+            submitButton.innerHTML = "Create";
+            submitButton.setAttribute("class", "flex-1 flat-button is-green has-white-text has-pointer");
+            submitButton.setAttribute("id", "submit-button");
+
+            hideButton.innerHTML = "Cancel";
+            hideButton.setAttribute("class", "flex-1 flat-button is-red has-white-text has-pointer");
+
+            container.appendChild(nameInput);
+            container.appendChild(submitButton);
+            container.appendChild(hideButton);
+
+            hideButton.addEventListener("click", function() {
+                emptyContainer(container);
+            });
+
+        },
+        returnValue: function() {
+            return nameInput.value;
+        },
+        submitButton
     }
 
 });
