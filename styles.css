@@ -106,7 +106,7 @@ body {
     border: none;
 }
 
-#project-name-input {
+.lh-50 {
     line-height: 50px;
 }
 
@@ -128,7 +128,7 @@ body {
 
 /* Misc */
 
-#project-name-input {
+.has-text-centered {
     text-align: center;
 }
 
@@ -136,7 +136,7 @@ body {
     text-align: left;
 }
 
-#project-name-input {
+.borderless {
     border: none;
 }
 
@@ -147,6 +147,14 @@ body {
 /* Responsiveness */
 
 @media (max-width: 1300px) {
+
+    .ml-20-mobile {
+        margin-left: 20px;
+    }
+
+    .mr-20-mobile {
+        margin-right: 20px;
+    }
 
     .has-text-centered-mobile {
         text-align: center;
