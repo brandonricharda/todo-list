@@ -17,23 +17,23 @@ const newTaskForm = (function() {
             container.innerHTML = "";
 
             nameInput.setAttribute("id", "task-name-input");
-            nameInput.setAttribute("class", "flex-1 lh-50 has-text-centered borderless");
+            nameInput.setAttribute("class", "flex-1 lh-50 has-text-centered borderless no-outline mt-20-mobile");
             nameInput.setAttribute("placeholder", "Task Name");
 
             descriptionInput.setAttribute("id", "task-description-input");
-            descriptionInput.setAttribute("class", "flex-1 lh-50 has-text-centered borderless");
+            descriptionInput.setAttribute("class", "flex-1 lh-50 has-text-centered borderless no-outline");
             descriptionInput.setAttribute("placeholder", "Task Description");
 
             dueDateInput.setAttribute("id", "task-due-date-input");
-            dueDateInput.setAttribute("class", "flex-1 lh-50 has-text-centered borderless");
+            dueDateInput.setAttribute("class", "flex-1 lh-50 has-text-centered borderless no-outline");
             dueDateInput.setAttribute("placeholder", "Due Date");
 
             priorityInput.setAttribute("id", "task-priority-input");
-            priorityInput.setAttribute("class", "flex-1 lh-50 has-text-centered borderless");
+            priorityInput.setAttribute("class", "flex-1 lh-50 has-text-centered borderless no-outline");
             priorityInput.setAttribute("placeholder", "Priority");
 
             statusInput.setAttribute("id", "task-status-input");
-            statusInput.setAttribute("class", "flex-1 lh-50 has-text-centered borderless");
+            statusInput.setAttribute("class", "flex-1 lh-50 has-text-centered borderless no-outline");
             statusInput.setAttribute("placeholder", "Status");
 
             submitButton.innerHTML = "Create";

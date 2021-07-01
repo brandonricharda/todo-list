@@ -140,6 +140,10 @@ body {
     border: none;
 }
 
+.no-outline {
+    outline: none;
+}
+
 #project-name-input:focus {
     outline: none;
 }
@@ -148,12 +152,20 @@ body {
 
 @media (max-width: 1300px) {
 
+    .flex-column-mobile {
+        flex-direction: column;
+    }
+
     .ml-20-mobile {
         margin-left: 20px;
     }
 
     .mr-20-mobile {
         margin-right: 20px;
+    }
+
+    .ml-0-mobile {
+        margin-left: 0px;
     }
 
     .has-text-centered-mobile {
@@ -195,5 +207,13 @@ body {
 
     .mr-0-mobile {
         margin-right: 0px;
+    }
+
+    .mt-20-mobile {
+        margin-top: 20px;
+    }
+
+    .width-100-percent-mobile {
+        width: 100%;
     }
 }
