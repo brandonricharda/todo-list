@@ -1,6 +1,6 @@
 import { objectCreationControls } from ".";
-import emptyContainer from "./emptyContainer";
 import newProjectForm from "./newProjectForm";
+import displayProjectTasks from "./displayProjectTasks";
 
 const domController = (function() {
 
@@ -26,11 +26,19 @@ const domController = (function() {
         displayLibrary: function(library) {
             // empty the projectList before populating it again
             projectList.innerHTML = "";
+
             library.projects.forEach( function(project) {
+
                 let projectButton = document.createElement("button");
+
+                projectButton.addEventListener("click", function() {
+                    displayProjectTasks(project);
+                });
+
                 projectButton.innerHTML = project.name;
                 projectButton.setAttribute("class", "flat-button has-text-centered-mobile has-text-left-desktop has-white-text-on-hover has-pointer is-blue-on-hover transparent-background pl-20 pt-20 pb-20 font-size-20");
                 projectList.appendChild(projectButton);
+
             });
         }
     }
