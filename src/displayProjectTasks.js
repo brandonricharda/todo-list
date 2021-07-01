@@ -6,7 +6,6 @@ const displayProjectTasks = (function(project) {
     project.tasks.forEach(function(task) {
         displayTask(taskListContainer, task);
     });
-    
 });
 
 export default displayProjectTasks;

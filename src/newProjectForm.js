@@ -10,25 +10,25 @@ const newProjectForm = (function() {
     return {
         showForm: function() {
             // before adding a new form, make sure the container is empty (aka hide form)
-            emptyContainer(container);
+            container.innerHTML = "";
 
             nameInput.setAttribute("id", "project-name-input");
-            nameInput.setAttribute("class", "flex-1");
+            nameInput.setAttribute("class", "flex-1 lh-50 has-text-centered borderless");
             nameInput.setAttribute("placeholder", "Project Name");
 
             submitButton.innerHTML = "Create";
-            submitButton.setAttribute("class", "flex-1 flat-button is-green has-white-text has-pointer");
+            submitButton.setAttribute("class", "flex-1 flat-button is-green has-white-text has-pointer ml-20-mobile mr-20-mobile");
             submitButton.setAttribute("id", "submit-button");
 
             hideButton.innerHTML = "Cancel";
-            hideButton.setAttribute("class", "flex-1 flat-button is-red has-white-text has-pointer");
+            hideButton.setAttribute("class", "flex-1 flat-button is-red has-white-text has-pointer ml-20-mobile mr-20-mobile");
 
             container.appendChild(nameInput);
             container.appendChild(submitButton);
             container.appendChild(hideButton);
 
             hideButton.addEventListener("click", function() {
-                emptyContainer(container);
+                container.innerHTML = "";
             });
 
         },

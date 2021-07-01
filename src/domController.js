@@ -1,6 +1,7 @@
 import { objectCreationControls } from ".";
 import newProjectForm from "./newProjectForm";
 import displayProjectTasks from "./displayProjectTasks";
+import newTaskForm from "./newTaskForm";
 
 const domController = (function() {
 
@@ -19,7 +20,8 @@ const domController = (function() {
     });
 
     newTaskButton.addEventListener("click", function() {
-        console.log("New task button clicked!");
+        let form = newTaskForm();
+        form.showForm();
     });
 
     return {
