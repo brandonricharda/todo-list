@@ -54,10 +54,18 @@ const newTaskForm = (function() {
             hideButton.addEventListener("click", function() {
                 container.innerHTML = "";
             });
-
         },
         hideForm: function() {
             emptyContainer(container);
+        },
+        returnValue: function() {
+            return {
+                Name: nameInput.value,
+                Description: descriptionInput.value,
+                DueDate: dueDateInput.value,
+                Priority: priorityInput.value,
+                Status: statusInput.value
+            }
         },
         submitButton
     }

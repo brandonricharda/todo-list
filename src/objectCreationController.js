@@ -5,15 +5,23 @@ import Task from "./task";
 
 const objectCreationController = (function() {
     let projectLibrary = new ProjectLibrary();
-    let project = new Project("Digitally Savvy");
-    let task = new Task("Finish Thing", "You Know", "August 1 2021", "High", "Not Done");
-    project.tasks.push(task);
-    projectLibrary.projects.push(project);
     return {
         createNewProject: function(name) { 
             if (name == "") { return false };
             let project = new Project(name);
             projectLibrary.addProject(project);
+            domControls.displayLibrary(projectLibrary);
+            return project;
+        },
+        createNewTask: function(taskParams, project) {
+            let name = taskParams.Name;
+            if (name == "") { return false };
+            let description = taskParams.Description;
+            let dueDate = taskParams.DueDate;
+            let priority = taskParams.Priority;
+            let status = taskParams.Status;
+            let task = new Task(name, description, dueDate, priority, status);
+            project.tasks.push(task);
             domControls.displayLibrary(projectLibrary);
         },
         projectLibrary
