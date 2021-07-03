@@ -38,6 +38,7 @@ const domController = (function() {
             let project = objectCreationControls.createNewProject(form.returnValue());
             displayLibrary(objectCreationControls.projectLibrary);
             currentProject = project;
+            displayProjectTasks(currentProject);
             form.hideForm();
         });
     });
