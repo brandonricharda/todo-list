@@ -48,6 +48,7 @@ const domController = (function() {
         form.submitButton.addEventListener("click", function() {
             objectCreationControls.createNewTask(form.returnValue(), currentProject);
             displayProjectTasks(currentProject);
+            form.hideForm();
         });
     });
 
