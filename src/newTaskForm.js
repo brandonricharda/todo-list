@@ -26,6 +26,9 @@ const newTaskForm = (function() {
 
             dueDateInput.setAttribute("id", "task-due-date-input");
             dueDateInput.setAttribute("class", "flex-1 lh-50 has-text-centered borderless no-outline");
+            dueDateInput.setAttribute("type", "date");
+            // dueDateInput.setAttribute("onfocus", "(this.type = 'date')");
+            // dueDateInput.setAttribute("onblur", "(this.type = 'text')");
             dueDateInput.setAttribute("placeholder", "Due Date");
 
             priorityInput.setAttribute("id", "task-priority-input");
