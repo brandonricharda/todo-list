@@ -148,6 +148,10 @@ body {
     outline: none;
 }
 
+::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
 /* Responsiveness */
 
 @media (max-width: 1300px) {
