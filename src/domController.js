@@ -47,9 +47,10 @@ const domController = (function() {
         let form = newTaskForm();
         form.showForm();
         form.submitButton.addEventListener("click", function() {
-            objectCreationControls.createNewTask(form.returnValue(), currentProject);
-            displayProjectTasks(currentProject);
-            form.hideForm();
+            if (objectCreationControls.createNewTask(form.returnValue(), currentProject) != false) {
+                displayProjectTasks(currentProject);
+                form.hideForm();
+            }
         });
     });
 

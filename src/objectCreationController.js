@@ -14,6 +14,7 @@ const objectCreationController = (function() {
             return project;
         },
         createNewTask: function(taskParams, project) {
+            if (project == null) { return false };
             let name = taskParams.Name;
             if (name == "") { return false };
             let description = taskParams.Description;
