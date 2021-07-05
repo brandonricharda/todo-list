@@ -34,7 +34,7 @@
 
 /* Fonts */
 
-body, button {
+body, button, input::-webkit-datetime-edit {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
