@@ -148,6 +148,10 @@ body {
     outline: none;
 }
 
+input::-webkit-datetime-edit {
+    color: grey;
+}
+
 ::-webkit-calendar-picker-indicator {
     display: none;
 }
