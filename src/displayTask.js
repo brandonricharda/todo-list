@@ -20,16 +20,25 @@ const displayTask = (function(container, task) {
     taskCompleteButton.innerHTML = "Complete";
     taskCompleteButton.setAttribute("class", "flex-1 flat-button has-text-centered-mobile has-pointer squared-35 is-green has-white-text width-60-mobile");
     taskContainer.appendChild(taskCompleteButton);
+    taskCompleteButton.addEventListener("click", function() {
+        task.status = "Complete";
+    });
 
     let taskInfoButton = document.createElement("button");
     taskInfoButton.innerHTML = "Info";
     taskInfoButton.setAttribute("class", "is-orange flex-1 flat-button has-text-centered-mobile has-pointer squared-35 has-white-text width-60-mobile");
     taskContainer.appendChild(taskInfoButton);
+    taskInfoButton.addEventListener("click", function() {
+        alert(`Task Description: ${task.description}`);
+    });
 
     let taskDeleteButton = document.createElement("button");
     taskDeleteButton.innerHTML = "Delete";
     taskDeleteButton.setAttribute("class", "is-red flex-1 flat-button has-text-centered-mobile has-pointer squared-35 has-white-text width-60-mobile mr-20 mr-0-mobile");
     taskContainer.appendChild(taskDeleteButton);
+    taskDeleteButton.addEventListener("click", function() {
+        container.removeChild(taskContainer);
+    });
 
     container.appendChild(taskContainer);
     

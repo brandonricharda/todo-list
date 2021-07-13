@@ -11,7 +11,6 @@ const domController = (function() {
     let currentProject = null;
 
     let displayLibrary = function(library) {
-        console.log("hi");
         // empty the projectList before populating it again
         projectList.innerHTML = "";
 
