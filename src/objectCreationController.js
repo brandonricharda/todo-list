@@ -5,6 +5,13 @@ import Task from "./task";
 
 const objectCreationController = (function() {
     let projectLibrary = new ProjectLibrary();
+    // for testing purposes
+    let project = new Project("Brandon's Store");
+    projectLibrary.addProject(project);
+    let task = new Task("Finish the thing", "You know the thing", "2020-12-05", "High", "Incomplete");
+    project.tasks.push(task);
+    domControls.displayLibrary(projectLibrary);
+
     return {
         createNewProject: function(name) { 
             if (name == "") { return false };
