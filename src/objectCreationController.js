@@ -8,7 +8,7 @@ const objectCreationController = (function() {
     // for testing purposes
     let project = new Project("Brandon's Store");
     projectLibrary.addProject(project);
-    let task = new Task("Finish the thing", "You know the thing", "2020-12-05", "High", "Incomplete");
+    let task = new Task("Finish the thing", "You know the thing", "2020-12-05", "High", "Incomplete", project);
     project.tasks.push(task);
     domControls.displayLibrary(projectLibrary);
 

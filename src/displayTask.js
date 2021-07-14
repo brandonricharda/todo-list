@@ -38,6 +38,7 @@ const displayTask = (function(container, task) {
     taskContainer.appendChild(taskDeleteButton);
     taskDeleteButton.addEventListener("click", function() {
         container.removeChild(taskContainer);
+        task.removeFromProject();
     });
 
     container.appendChild(taskContainer);
