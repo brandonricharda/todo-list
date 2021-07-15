@@ -4,15 +4,19 @@ const displayTask = (function(container, task) {
     taskContainer.setAttribute("class", "task flex flex-vertical-center is-grey-on-hover pl-20");
 
     let taskMetadataContainer = document.createElement("div");
-    taskMetadataContainer.setAttribute("class", "task-metadata flex-10 flex-column flex");
+    taskMetadataContainer.setAttribute("class", "task-metadata flex-10 flex-row flex");
 
     let taskName = document.createElement("h3");
     taskName.innerHTML = task.name;
     taskMetadataContainer.appendChild(taskName);
 
-    let taskDueDate = document.createElement("p");
+    let taskDueDate = document.createElement("h3");
     taskDueDate.innerHTML = task.dueDate;
     taskMetadataContainer.appendChild(taskDueDate);
+
+    let taskPriority = document.createElement("h3");
+    taskPriority.innerHTML = task.priority;
+    taskMetadataContainer.appendChild(taskPriority);
 
     taskContainer.appendChild(taskMetadataContainer);
 
