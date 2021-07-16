@@ -13,6 +13,7 @@ const displayTask = (function(container, task) {
     let taskDueDate = document.createElement("h3");
     taskDueDate.innerHTML = `Due: ${task.dueDate}`;
     taskMetadataContainer.appendChild(taskDueDate);
+    taskDueDate.setAttribute("class", "pl-20 pr-20 no-padding-mobile");
 
     let taskPriority = document.createElement("h3");
     taskPriority.innerHTML = `Priority: ${task.priority}`;
