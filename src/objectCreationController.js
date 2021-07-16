@@ -4,19 +4,21 @@ import ProjectLibrary from "./projectLibrary";
 import Task from "./task";
 
 const objectCreationController = (function() {
+
     let projectLibrary = new ProjectLibrary();
-    // for testing purposes
-    let project = new Project("Brandon's Store");
-    projectLibrary.addProject(project);
-    let task = new Task("Finish the thing", "You know the thing", "2020-12-05", "High", "Incomplete", project);
-    project.tasks.push(task);
-    domControls.displayLibrary(projectLibrary);
+
+    if (window.localStorage.getItem("projects") != null) {
+        domControls.displayLibrary(JSON.parse(window.localStorage.getItem("projects")));
+    } else {
+        window.localStorage.setItem("projects", JSON.stringify(projectLibrary));
+    }
 
     return {
         createNewProject: function(name) { 
             if (name == "") { return false };
             let project = new Project(name);
             projectLibrary.addProject(project);
+            window.localStorage.setItem("projects", JSON.stringify(projectLibrary));
             domControls.displayLibrary(projectLibrary);
             return project;
         },
@@ -30,6 +32,7 @@ const objectCreationController = (function() {
             let status = taskParams.Status;
             let task = new Task(name, description, dueDate, priority, status);
             project.tasks.push(task);
+            window.localStorage.setItem("projects", JSON.stringify(projectLibrary));
             domControls.displayLibrary(projectLibrary);
         },
         projectLibrary
