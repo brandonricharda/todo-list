@@ -1,3 +1,5 @@
+import { objectCreationControls } from ".";
+
 const displayTask = (function(container, task) {
 
     let taskContainer = document.createElement("div");
@@ -33,6 +35,7 @@ const displayTask = (function(container, task) {
         } else {
             alert("This task is already complete!");
         }
+        window.localStorage.setItem("projects", JSON.stringify(objectCreationControls.projectLibrary));
     });
 
     let taskInfoButton = document.createElement("button");
