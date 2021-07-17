@@ -46,6 +46,12 @@ const displayTask = (function(container, task) {
         task.removeFromProject();
     });
 
+    console.log(task.status);
+
+    if (task.status == "Complete") {
+        console.log("done");
+    }
+
     container.appendChild(taskContainer);
     
 });

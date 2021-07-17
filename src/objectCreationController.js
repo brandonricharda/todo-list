@@ -29,8 +29,7 @@ const objectCreationController = (function() {
             let description = taskParams.Description;
             let dueDate = taskParams.DueDate;
             let priority = taskParams.Priority;
-            let status = taskParams.Status;
-            let task = new Task(name, description, dueDate, priority, status);
+            let task = new Task(name, description, dueDate, priority, "Incomplete");
             project.tasks.push(task);
             window.localStorage.setItem("projects", JSON.stringify(projectLibrary));
             domControls.displayLibrary(projectLibrary);

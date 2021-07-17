@@ -35,10 +35,6 @@ const newTaskForm = (function() {
             priorityInput.setAttribute("class", "flex-1 lh-50 has-text-centered borderless no-outline");
             priorityInput.setAttribute("placeholder", "Priority");
 
-            statusInput.setAttribute("id", "task-status-input");
-            statusInput.setAttribute("class", "flex-1 lh-50 has-text-centered borderless no-outline");
-            statusInput.setAttribute("placeholder", "Status");
-
             submitButton.innerHTML = "Create";
             submitButton.setAttribute("class", "flex-1 flat-button is-green has-white-text has-pointer ml-20-mobile mr-20-mobile lh-50");
             submitButton.setAttribute("id", "submit-button");
@@ -50,7 +46,6 @@ const newTaskForm = (function() {
             container.appendChild(descriptionInput);
             container.appendChild(dueDateInput);
             container.appendChild(priorityInput);
-            container.appendChild(statusInput);
             container.appendChild(submitButton);
             container.appendChild(hideButton);
 
