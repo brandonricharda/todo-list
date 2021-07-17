@@ -24,9 +24,15 @@ const displayTask = (function(container, task) {
     let taskCompleteButton = document.createElement("button");
     taskCompleteButton.innerHTML = "Complete";
     taskCompleteButton.setAttribute("class", "flex-1 flat-button has-text-centered-mobile has-pointer squared-35 is-green has-white-text width-60-mobile");
+
     taskContainer.appendChild(taskCompleteButton);
+
     taskCompleteButton.addEventListener("click", function() {
-        task.status = "Complete";
+        if (task.status == "Incomplete") {
+            task.status = "Complete";
+        } else {
+            alert("This task is already complete!");
+        }
     });
 
     let taskInfoButton = document.createElement("button");
@@ -45,12 +51,6 @@ const displayTask = (function(container, task) {
         container.removeChild(taskContainer);
         task.removeFromProject();
     });
-
-    console.log(task.status);
-
-    if (task.status == "Complete") {
-        console.log("done");
-    }
 
     container.appendChild(taskContainer);
     
