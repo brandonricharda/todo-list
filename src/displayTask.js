@@ -32,10 +32,10 @@ const displayTask = (function(container, task) {
     taskCompleteButton.addEventListener("click", function() {
         if (task.status == "Incomplete") {
             task.status = "Complete";
+            window.localStorage.setItem("projects", JSON.stringify(objectCreationControls.projectLibrary));
         } else {
             alert("This task is already complete!");
         }
-        window.localStorage.setItem("projects", JSON.stringify(objectCreationControls.projectLibrary));
     });
 
     let taskInfoButton = document.createElement("button");
