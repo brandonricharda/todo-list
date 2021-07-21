@@ -8,6 +8,13 @@ const objectCreationController = (function() {
     let projectLibrary = new ProjectLibrary();
 
     if (window.localStorage.getItem("projects") != null) {
+        let existingProjects = JSON.parse(window.localStorage.getItem("projects")).projects;
+        existingProjects.forEach(function(project) {
+            projectLibrary.projects.push(project);
+        });
+    }
+
+    if (window.localStorage.getItem("projects") != null) {
         domControls.displayLibrary(JSON.parse(window.localStorage.getItem("projects")));
     } else {
         window.localStorage.setItem("projects", JSON.stringify(projectLibrary));

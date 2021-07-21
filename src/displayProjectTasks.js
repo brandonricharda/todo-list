@@ -4,7 +4,7 @@ const displayProjectTasks = (function(project) {
     let taskListContainer = document.getElementById("task-list");
     taskListContainer.innerHTML = "";
     project.tasks.forEach(function(task) {
-        displayTask(taskListContainer, task);
+        displayTask(taskListContainer, task, project);
     });
 });
 

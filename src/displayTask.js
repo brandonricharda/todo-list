@@ -1,6 +1,6 @@
 import { objectCreationControls } from ".";
 
-const displayTask = (function(container, task) {
+const displayTask = (function(container, task, project) {
 
     let taskContainer = document.createElement("div");
     taskContainer.setAttribute("class", "task flex flex-vertical-center is-grey-on-hover pl-20");
@@ -52,7 +52,9 @@ const displayTask = (function(container, task) {
     taskContainer.appendChild(taskDeleteButton);
     taskDeleteButton.addEventListener("click", function() {
         container.removeChild(taskContainer);
-        task.removeFromProject();
+        let taskIndex = project.tasks.findIndex(element => element == task);
+        project.tasks.splice(taskIndex, 1);
+        window.localStorage.setItem("projects", JSON.stringify(objectCreationControls.projectLibrary));
     });
 
     container.appendChild(taskContainer);
