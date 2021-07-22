@@ -53,7 +53,10 @@ const displayTask = (function(container, task, project) {
     taskDeleteButton.addEventListener("click", function() {
         container.removeChild(taskContainer);
         let taskIndex = project.tasks.findIndex(element => element == task);
+        let taskProjectIndex = objectCreationControls.projectLibrary.projects.findIndex(element => JSON.stringify(element) == JSON.stringify(project));
+        objectCreationControls.projectLibrary.projects[taskProjectIndex].tasks.splice(taskIndex, 1);
         project.tasks.splice(taskIndex, 1);
+        console.log(objectCreationControls.projectLibrary);
         window.localStorage.setItem("projects", JSON.stringify(objectCreationControls.projectLibrary));
     });
 
