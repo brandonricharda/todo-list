@@ -1,4 +1,5 @@
 import { domControls } from ".";
+import displayProjectTasks from "./displayProjectTasks";
 import Project from "./project";
 import ProjectLibrary from "./projectLibrary";
 import Task from "./task";
@@ -26,20 +27,20 @@ const objectCreationController = (function() {
             let project = new Project(name);
             projectLibrary.addProject(project);
             window.localStorage.setItem("projects", JSON.stringify(projectLibrary));
-            domControls.displayLibrary(projectLibrary);
+            domControls.displayLibrary(projectLibrary.projects);
             return project;
         },
         createNewTask: function(taskParams, project) {
             if (project == null) { return false };
             let name = taskParams.Name;
-            if (name == "") { return false };
             let description = taskParams.Description;
             let dueDate = taskParams.DueDate;
             let priority = taskParams.Priority;
             let task = new Task(name, description, dueDate, priority, "Incomplete");
-            project.tasks.push(task);
+            projectLibrary.projects.find(element => JSON.stringify(element) == JSON.stringify(project)).tasks.push(task)
             window.localStorage.setItem("projects", JSON.stringify(projectLibrary));
-            domControls.displayLibrary(projectLibrary);
+            project.tasks.push(task);
+            displayProjectTasks(project);
         },
         projectLibrary
     }
