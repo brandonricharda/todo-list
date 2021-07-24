@@ -27,7 +27,7 @@ const objectCreationController = (function() {
             let project = new Project(name);
             projectLibrary.addProject(project);
             window.localStorage.setItem("projects", JSON.stringify(projectLibrary));
-            domControls.displayLibrary(projectLibrary.projects);
+            // domControls.displayLibrary(projectLibrary.projects);
             return project;
         },
         createNewTask: function(taskParams, project) {
