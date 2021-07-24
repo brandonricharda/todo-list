@@ -4,6 +4,8 @@ This is my solution to The Odin Project's Todo List assignment, which you can le
 
 https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/javascript/lessons/todo-list
 
+Live Demo: https://brandonricharda.github.io/todo-list/
+
 ## Application Walkthrough
 
 ### Default Page
